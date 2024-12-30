@@ -7,55 +7,38 @@ import { Accordion, AccordionItem } from 'accessible-astro-components'
   <section class="py-6 md:py-8">
     <div class="container grid grid-cols-1 gap-12 md:grid-cols-2">
       <div class="flex flex-col items-start gap-4">
-        <h2 class="text-6xl">FAQ</h2>
-        <p class="text-2xl">
-          This section demonstrates how to effectively use the Accordion component to organize and display frequently
-          asked questions in an accessible and user-friendly way.
+        <h2 class="">FAQ</h2>
+        <p class="text-lg">
+          Have questions that aren't addressed here?
         </p>
-        <a class="button" href="/faq">Contact support team</a>
+        <a class="button color-secondary" href="/contact">Contact me!</a>
       </div>
       <div class="space-content">
         <Accordion>
-          <AccordionItem name="exclusive" title="What is WCAG and why is it important?">
+          <AccordionItem name="exclusive" title="What is online therapy?">
             <p>
-              WCAG (Web Content Accessibility Guidelines) is a set of internationally recognized standards for web
-              accessibility. Following WCAG ensures your website is usable by people with various disabilities,
-              including visual, auditory, physical, and cognitive impairments. It's important not just for
-              accessibility, but also for legal compliance, SEO, and reaching a wider audience.
+              Online therapy (also known as telehealth or virtual therapy) is therapy that takes place over the Internet
+              instead of in person. I use a secure video platform called Simple Practice to conduct sessions.
             </p>
           </AccordionItem>
-          <AccordionItem name="exclusive" title="What's the difference between ARIA labels and alt text?">
+          <AccordionItem name="exclusive" title="Do you take insurance?">
             <p>
-              Alt text is specifically for describing images to screen reader users, while ARIA labels (aria-label,
-              aria-labelledby) can describe any element on a page. Alt text is HTML's native way to provide alternative
-              text for images, while ARIA labels are part of the ARIA specification that helps make dynamic content and
-              advanced UI controls more accessible.
+              Yes! I am in-network with CareFirst BlueCross BlueShield. If I'm not in-network with your insurance, I can
+              provide you with a superbill to submit to your insurance company for reimbursement.
             </p>
           </AccordionItem>
-          <AccordionItem name="exclusive" title="Why is keyboard navigation important?">
+          <AccordionItem name="exclusive" title="What are your fees?">
             <p>
-              Keyboard navigation is essential for users who can't use a mouse, including people with motor
-              disabilities, visual impairments, or those who simply prefer keyboard controls. A website should be fully
-              operable using only a keyboard, with visible focus indicators and logical tab order. This includes being
-              able to access all interactive elements and navigate through content efficiently.
+              Out of network, my fees are $200 per 50-minute session. If this is a barrier to you receiving care, please
+              contact me to discuss options.
+            </p>
+            <p>
+              If you have CareFirst BlueCross BlueShield, your fees will be determined by your insurance plan. If you are unsure of your benefits, please call your plan directly.
             </p>
           </AccordionItem>
-          <AccordionItem name="exclusive" title="What is a sufficient color contrast ratio?">
+          <AccordionItem name="exclusive" title="What is your cancellation policy?">
             <p>
-              According to WCAG 2.2 AA standards, text should have a minimum contrast ratio of 4.5:1 against its
-              background for regular text, and 3:1 for large text (18pt or 14pt bold). For non-text elements like icons
-              or buttons, a minimum ratio of 3:1 is required. This ensures content is readable for users with visual
-              impairments or color blindness.
-            </p>
-          </AccordionItem>
-          <AccordionItem name="exclusive" title="How do I make custom components accessible?">
-            <p>
-              To make custom components accessible, focus on these key aspects: use semantic HTML where possible,
-              implement proper keyboard support, add appropriate ARIA attributes, manage focus when needed, and ensure
-              adequate color contrast. Always test with screen readers and keyboard navigation. Consider using
-              established design patterns from the <a href="https://www.w3.org/WAI/ARIA/apg/patterns/"
-                >ARIA Authoring Practices Guide</a
-              >.
+              To avoid a late cancellation fee, please cancel or reschedule your appointment at least 24 hours in advance. 
             </p>
           </AccordionItem>
         </Accordion>
