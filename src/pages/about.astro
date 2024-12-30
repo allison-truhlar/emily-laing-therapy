@@ -1,7 +1,7 @@
 ---
 import DefaultLayout from '../layouts/DefaultLayout.astro'
-import Feature from '../components/Feature.astro'
 import ContentMedia from '../components/ContentMedia.astro'
+const base = import.meta.env.BASE_URL
 ---
 
 <DefaultLayout>
@@ -22,8 +22,8 @@ import ContentMedia from '../components/ContentMedia.astro'
     <div class="container">
       <p class="text-xl text-[#2A6F69] md:text-2xl">Have any questions or want to book an appointment?</p>
       <div class="mt-6 flex flex-row gap-3">
-        <a class="button" href="/contact/"> Contact me! </a>
-        <a class="button color-secondary" href="/about/"> FAQ </a>
+        <a class="button" href=`${base}/contact`> Contact me!</a>
+        <a class="button color-secondary" href=`${base}/faq/`> FAQ </a>
       </div>
     </div>
   </section>

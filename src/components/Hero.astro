@@ -1,25 +1,20 @@
 ---
-import { Icon } from 'astro-icon/components'
-
-const { src = '/astronaut-hero-img.webp' } = Astro.props
+const base = import.meta.env.BASE_URL
 ---
 
-<section class="hero flex flex-col h-[calc(100vh-93px)] md:h-[calc(100vh-6rem)] md:py-8">
-  <div class="container flex flex-col min-h-full justify-center bg-hero-sm md:bg-hero-md bg-cover bg-center bg-no-repeat">
-      <div class="flex flex-col items-start justify-center gap-4 p-6">
-        <h1 class="title text-5xl md:text-6xl text-left">Emily Laing, LMHC</h1>
-        <h2 class="text-xl md:text-3xl pb-4">Licensed Mental Health Counselor</h2>
-        <h3 class="text-base md:text-xl">Providing Online, Somatic-Focused Therapy in New York, Virginia, and Washington DC.</h3>
-        <div class="flex flex-col gap-3 min-[500px]:flex-row">
-          <a class="button" href="/contact/">
-            Request appointment
-          </a>
-          <a
-            class="button color-secondary"
-            href="/about/"
-          >
-            Learn more about Emily
-          </a>
+<section class="hero flex h-[calc(100vh-93px)] flex-col md:h-[calc(100vh-6rem)] md:py-8">
+  <div
+    class="container flex min-h-full flex-col justify-center bg-hero-sm bg-cover bg-center bg-no-repeat md:bg-hero-md"
+  >
+    <div class="flex flex-col items-start justify-center gap-4 p-6">
+      <h1 class="title text-left text-5xl md:text-6xl">Emily Laing, LMHC</h1>
+      <h2 class="pb-4 text-xl md:text-3xl">Licensed Mental Health Counselor</h2>
+      <h3 class="text-base md:text-xl">
+        Providing Online, Somatic-Focused Therapy in New York, Virginia, and Washington DC.
+      </h3>
+      <div class="flex flex-col gap-3 min-[500px]:flex-row">
+        <a class="button" href=`${base}/contact/``> Request appointment </a>
+        <a class="button color-secondary" href=`${base}/about/`> Learn more about Emily </a>
       </div>
       <!-- <img class="hidden lg:block" src={src} alt="" decoding="async" /> -->
     </div>
@@ -27,7 +22,7 @@ const { src = '/astronaut-hero-img.webp' } = Astro.props
 </section>
 
 <style lang="scss">
-  .title{
+  .title {
     color: var(--primary-text);
   }
   .text-gradient {
