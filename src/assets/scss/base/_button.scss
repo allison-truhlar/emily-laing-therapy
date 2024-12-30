@@ -9,8 +9,8 @@
   text-decoration: none;
   text-align: center;
   color: var(--neutral-900);
-  background-color: var(--primary-100);
-  border: 3px solid var(--primary-100);
+  background-color: var(--primary-action);
+  border: 3px solid var(--primary-action);
   border-radius: 3px;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 
@@ -26,8 +26,8 @@
   }
 
   &.color-secondary {
-    background-color: var(--secondary-100);
-    border-color: (var(--secondary-100));
+    background-color: var(--secondary-action);
+    border-color: (var(--secondary-action));
 
     &:hover,
     &:focus {

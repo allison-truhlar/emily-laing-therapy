@@ -4,35 +4,33 @@ import { Icon } from 'astro-icon/components'
 const { src = '/astronaut-hero-img.webp' } = Astro.props
 ---
 
-<section class="hero my-24">
-  <div class="container">
-    <div class="grid grid-cols-1 items-center gap-24 lg:grid-cols-2">
-      <div class="flex flex-col items-center gap-8 md:items-start">
-        <h1 class="text-center text-6xl md:text-left lg:text-8xl">
-          <slot><span class="text-gradient">Accessible</span> Starter for Astro</slot>
-        </h1>
+<section class="hero flex flex-col h-[calc(100vh-93px)] md:h-[calc(100vh-6rem)] md:py-8">
+  <div class="container flex flex-col min-h-full justify-center bg-hero-sm md:bg-hero-md bg-cover bg-center bg-no-repeat">
+      <div class="flex flex-col items-start justify-center gap-10 p-6">
+        <h1 class="title text-5xl md:text-6xl pb-4 text-left">Emily Laing, LMHC</h1>
+        <h2 class="text-xl md:text-3xl">Providing Online, Somatic-Focused Therapy in New York, Virginia, and Washington DC.</h2>
         <div class="flex flex-col gap-3 min-[500px]:flex-row">
-          <a class="button has-icon" href="https://github.com/markteekman/accessible-astro-starter">
-            <Icon name="ion:star-outline" />
-            Star on GitHub
+          <a class="button" href="https://github.com/markteekman/accessible-astro-starter">
+            Request appointment
           </a>
           <a
-            class="button has-icon color-secondary"
+            class="button color-secondary"
             href="https://github.com/markteekman/accessible-astro-starter/blob/main/README.md"
           >
-            <Icon name="ion:bookmark-outline" />
-            Read the Docs
+            Learn more about Emily
           </a>
-        </div>
       </div>
-      <img class="hidden lg:block" src={src} alt="" decoding="async" />
+      <!-- <img class="hidden lg:block" src={src} alt="" decoding="async" /> -->
     </div>
   </div>
 </section>
 
 <style lang="scss">
+  .title{
+    color: var(--secondary-action);
+  }
   .text-gradient {
-    background: linear-gradient(315deg, var(--primary-200) 25%, var(--secondary-500));
+    background: linear-gradient(315deg, var(--secondary-action) 25%, var(--primary-text));
     background-clip: border-box;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
