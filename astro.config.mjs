@@ -9,14 +9,7 @@ export default defineConfig({
   site: 'https://allison-truhlar.github.io',
   base: 'emily-laing-therapy',
   compressHTML: true,
-  integrations: [
-    mdx(),
-    icon(),
-    tailwind({
-      applyBaseStyles: false,
-    }),
-    compress(),
-  ],
+  integrations: [mdx(), icon(), tailwind({}), compress()],
   vite: {
     css: {
       preprocessorOptions: {

@@ -28,12 +28,9 @@ const base = import.meta.env.BASE_URL
 </div>
 
 <script>
-  console.log('Script starting...')
   document.addEventListener('DOMContentLoaded', () => {
-    console.log('astro:page-load fired')
     // variables
     const mainNav = document.querySelector('#main-navigation')
-    console.log('mainNav element:', mainNav)
     const mainMenu = mainNav.querySelector('ul')
     const dropdownMenus = [...document.querySelectorAll('.has-dropdown button')]
 
@@ -389,7 +386,7 @@ const base = import.meta.env.BASE_URL
     }
   }
   @media (min-width: 768px) {
-    .is-desktop {
+    is-desktop {
       .desktop-menu {
         display: block;
       }

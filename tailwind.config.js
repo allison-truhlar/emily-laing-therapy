@@ -10,8 +10,7 @@ module.exports = {
           `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('emily-laing-therapy/img/harpers-ferry.jpg')`,
         // "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/img/shenandoah.jpg')",
         // "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/img/shenandoah2.jpg')",
-        'hero-md':
-          "linear-gradient(rgba(0, 0, 0, 0.6), rgba(8, 45, 56, 0.8)), url('emily-laing-therapy/img/steven-kamenar-MMJx78V7xS8-unsplash-md.jpg')",
+        'hero-md': `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('emily-laing-therapy/img/harpers-ferry.jpg')`,
       },
     },
   },
