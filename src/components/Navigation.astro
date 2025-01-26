@@ -1,13 +1,12 @@
 ---
 import ResponsiveToggle from './ResponsiveToggle.astro'
-// import { DarkMode } from 'accessible-astro-components'
 import { Image } from 'astro:assets'
 import logo from '../assets/img/logo.svg'
 
 const base = import.meta.env.BASE_URL
 ---
 
-<div id="main-navigation" class="is-desktop flex items-center py-6 md:py-8">
+<div id="main-navigation" class="is-mobile flex items-center py-6 md:py-8">
   <div class="container">
     <a href={base} class="flex items-center gap-2 !no-underline">
       <Image src={logo} alt="Your Logo" width="250" />
@@ -18,7 +17,6 @@ const base = import.meta.env.BASE_URL
           <slot />
         </ul>
       </nav>
-      <!-- <DarkMode /> -->
       <ResponsiveToggle />
     </div>
     <nav class="mobile-menu" aria-label="Main navigation mobile">
@@ -30,9 +28,12 @@ const base = import.meta.env.BASE_URL
 </div>
 
 <script>
-  document.addEventListener('astro:page-load', () => {
+  console.log('Script starting...')
+  document.addEventListener('DOMContentLoaded', () => {
+    console.log('astro:page-load fired')
     // variables
     const mainNav = document.querySelector('#main-navigation')
+    console.log('mainNav element:', mainNav)
     const mainMenu = mainNav.querySelector('ul')
     const dropdownMenus = [...document.querySelectorAll('.has-dropdown button')]
 
@@ -62,12 +63,12 @@ const base = import.meta.env.BASE_URL
       const logoWidthBuffer = 300
       const totalMenuWidth = Math.round(desktopMenuWidth) + logoWidthBuffer
 
-      if (totalMenuWidth >= mainNavWidth) {
-        mainNav.classList.remove('is-desktop')
-        mainNav.classList.add('is-mobile')
-      } else if (totalMenuWidth <= mainNavWidth) {
+      if (window.innerWidth >= 768 && totalMenuWidth < mainNavWidth) {
         mainNav.classList.add('is-desktop')
         mainNav.classList.remove('is-mobile')
+      } else {
+        mainNav.classList.remove('is-desktop')
+        mainNav.classList.add('is-mobile')
       }
     }
 
@@ -387,32 +388,15 @@ const base = import.meta.env.BASE_URL
       }
     }
   }
-
-  .darkmode-toggle {
-    padding: 0;
-    border: none;
-
-    svg {
-      width: 30px;
-      margin-top: 4px;
-    }
-
-    svg path {
-      fill: var(--action-color);
-    }
-
-    &:hover {
-      svg path {
-        fill: var(--action-color-state);
+  @media (min-width: 768px) {
+    .is-desktop {
+      .desktop-menu {
+        display: block;
       }
-    }
 
-    &:focus {
-      @include outline;
-
-      &:not(:focus-visible) {
-        outline: none;
-        box-shadow: none;
+      .mobile-menu,
+      .responsive-toggle {
+        display: none;
       }
     }
   }

@@ -7,8 +7,7 @@ import Footer from '../components/Footer.astro'
 
 const {
   title = 'Emily Laing Therapy',
-  description = 'Emily Laing, LMHC. Providing evidence-based therapy for adults in Maryland, Virginia, and New York State.',
-  url,
+  description = 'Emily Laing, LMHC. Providing evidence-based therapy for adults in New York, Virginia, and Washington DC.',
   image = '/social-preview-image.png',
 } = Astro.props
 ---
@@ -33,7 +32,7 @@ const {
   </head>
   <body>
     <Header />
-    <main id="main-content" transition:animate="fade">
+    <main id="main-content">
       <slot />
     </main>
     <Footer />
@@ -54,16 +53,6 @@ const {
         --primary-background: #2a6f69;
         --neutral-background: var(--neutral-200);
       }
-
-      // // dark color scheme overrides
-      // .darkmode {
-      //   --font-color: var(--neutral-100);
-      //   --action-color: var(--secondary-100);
-      //   --action-color-state: var(--secondary-500);
-      //   --background: var(--dark-100);
-      //   --primary-background: var(--primary-500);
-      //   --neutral-background: var(--neutral-900);
-      // }
 
       // sticky footer on low content pages
       html,

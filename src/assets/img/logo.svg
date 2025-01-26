@@ -31,7 +31,8 @@
      inkscape:window-x="0"
      inkscape:window-y="38"
      inkscape:window-maximized="0"
-     inkscape:current-layer="svg3" />
+     inkscape:current-layer="svg3"
+     inkscape:export-bgcolor="#ffffff00" />
   <!---->
   <defs
      data-v-fde0c5aa=""
@@ -91,7 +92,7 @@
      class="logo-background-square"
      id="rect1"
      inkscape:label="rect1"
-     style="opacity:0;stroke-width:0.311877"
+     style="opacity:0;stroke-width:0.311877;fill:#1a1a1a"
      ry="0.3590247" />
   <defs
      data-v-fde0c5aa=""
