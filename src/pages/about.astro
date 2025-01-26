@@ -1,29 +1,37 @@
 ---
 import DefaultLayout from '../layouts/DefaultLayout.astro'
-import ContentMedia from '../components/ContentMedia.astro'
-import Image from 'astro/components/Image.astro'
-import placeholder from '../assets/img/accessible-components.webp'
+import { Media } from 'accessible-astro-components'
 const base = import.meta.env.BASE_URL
 ---
 
 <DefaultLayout>
   <section class="my-8 md:my-12">
     <div class="page container">
-      <div class="flex flex-col gap-8 pb-8 md:flex-row md:items-center md:gap-20 md:pb-12">
-        <div class="min-w-[300px]">
-          <h2>Hi, I'm Emily</h2>
-          <p>(She/Her/Hers)</p>
+      <div class="grid grid-cols-1 gap-8 pb-8 md:grid-cols-2 md:pb-12">
+        <div class="flex min-w-[300px] flex-col gap-8 md:gap-12">
+          <div >
+            <h2>Hi, I'm Emily</h2>
+            <p>(She/Her/Hers)</p>
+          </div>
+          <Media
+            alt="Emily Laing, LPC, a white woman in her mid to late 30s with shoulder-length auburn hair and wearing a green sweater with a blue and white-striped collared shirt underneath, smiles towards the camera. She sits in front of a bookshelf with a statue reading 'Sit still and heal'."
+            src={`${base}/img/EMILY-LAING-LPC.jpg`}
+            class="block w-full rounded-md md:hidden"
+          />
+
+          <p>I'm honored you're considering working with me.</p>
+          <p>
+            I'm a Licensed Mental Health Counselor (LMHC) offering online psychotherapy to adults living in Washington
+            DC and Virginia. I specialize in somatic-focused therapy, which means I help you connect with your body to
+            heal from past trauma, anxiety, and depression.
+          </p>
+          <p>I received my Masters from University of Albany.</p>
         </div>
-        <div class="w-full"><Image src={placeholder} alt="placeholder image"  /></div>
-      </div>
-      <div class="flex flex-col gap-8">
-        <p>I'm honored you're considering working with me.</p>
-        <p>
-          I'm a Licensed Mental Health Counselor (LMHC) offering online psychotherapy to adults living in Washington DC
-          and Virginia. I specialize in somatic-focused therapy, which means I help you connect with your body to heal
-          from past trauma, anxiety, and depression.
-        </p>
-        <p>I received my Masters from University of Albany.</p>
+        <Media
+          alt="Emily Laing, LPC, a white woman in her mid to late 30s with shoulder-length auburn hair and wearing a green sweater with a blue and white-striped collared shirt underneath, smiles towards the camera. She sits in front of a bookshelf with a statue reading 'Sit still and heal'."
+          src={`${base}/img/EMILY-LAING-LPC.jpg`}
+          class="hidden w-full md:block"
+        />
       </div>
     </div>
   </section>
