@@ -1,7 +1,6 @@
 ---
 import DefaultLayout from '../layouts/DefaultLayout.astro'
 import { Media } from 'accessible-astro-components'
-const base = import.meta.env.BASE_URL
 ---
 
 <DefaultLayout>
@@ -9,17 +8,16 @@ const base = import.meta.env.BASE_URL
     <div class="page container">
       <div class="grid grid-cols-1 gap-8 pb-8 md:grid-cols-2 md:pb-12">
         <div class="flex min-w-[300px] flex-col gap-8 md:gap-12">
-          <div >
+          <div>
             <h2>Hi, I'm Emily</h2>
-            <p>(She/Her/Hers)</p>
+            <p class="pb-4">(She/Her/Hers)</p>
+            <p>I'm honored you're considering working with me.</p>
           </div>
           <Media
             alt="Emily Laing, LPC, a white woman in her mid to late 30s with shoulder-length auburn hair and wearing a green sweater with a blue and white-striped collared shirt underneath, smiles towards the camera. She sits in front of a bookshelf with a statue reading 'Sit still and heal'."
-            src={`${base}/img/EMILY-LAING-LPC.jpg`}
+            src={`/img/EMILY-LAING-LPC.jpg`}
             class="block w-full rounded-md md:hidden"
           />
-
-          <p>I'm honored you're considering working with me.</p>
           <p>
             I'm a Licensed Mental Health Counselor (LMHC) offering online psychotherapy to adults living in Washington
             DC and Virginia. I specialize in somatic-focused therapy, which means I help you connect with your body to
@@ -29,7 +27,7 @@ const base = import.meta.env.BASE_URL
         </div>
         <Media
           alt="Emily Laing, LPC, a white woman in her mid to late 30s with shoulder-length auburn hair and wearing a green sweater with a blue and white-striped collared shirt underneath, smiles towards the camera. She sits in front of a bookshelf with a statue reading 'Sit still and heal'."
-          src={`${base}/img/EMILY-LAING-LPC.jpg`}
+          src={`/img/EMILY-LAING-LPC.jpg`}
           class="hidden w-full md:block"
         />
       </div>
@@ -40,8 +38,8 @@ const base = import.meta.env.BASE_URL
     <div class="container">
       <p class="text-xl text-[#2A6F69] md:text-2xl">Have any questions or want to book an appointment?</p>
       <div class="mt-6 flex flex-row gap-3">
-        <a class="button" href=`${base}/contact`> Contact me!</a>
-        <a class="button color-secondary" href=`${base}/faq/`> FAQ </a>
+        <a class="button" href=`/contact`> Contact me!</a>
+        <a class="button color-secondary" href=`/faq`> FAQ </a>
       </div>
     </div>
   </section>

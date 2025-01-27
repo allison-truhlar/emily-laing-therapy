@@ -6,8 +6,7 @@ import icon from 'astro-icon'
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://allison-truhlar.github.io',
-  base: 'emily-laing-therapy',
+  site: 'http://emilylaingtherapy.com',
   compressHTML: true,
   integrations: [mdx(), icon(), tailwind({}), compress()],
   vite: {
