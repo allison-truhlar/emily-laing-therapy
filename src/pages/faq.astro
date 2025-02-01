@@ -1,17 +1,23 @@
 ---
+import { Media } from 'accessible-astro-components'
 import DefaultLayout from '../layouts/DefaultLayout.astro'
 import { Accordion, AccordionItem } from 'accessible-astro-components'
+import smallImg from '../assets/img/EmilyLaingLPC-faq-small.jpg'
+import largeImg from '../assets/img/EmilyLaingLPC-faq-large.jpg'
 ---
 
 <DefaultLayout title="FAQ">
-  <section class="my-8 md:my-20">
-    <div class="page container grid grid-cols-1 gap-12 md:grid-cols-2">
-      <div class="flex flex-col items-start gap-8 ">
+  <section class="my-8 md:my-12">
+    <div class="page container grid grid-cols-1 gap-8 md:grid-cols-2">
+      <div class="flex flex-col justify-center gap-4 md:justify-start md:gap-8">
+        <Media
+          alt="Emily Laing, LPC, a white woman in her mid to late 30s with shoulder-length auburn hair, smiles towards the camera. She wears a green sweater with a denim collared shirt underneath, jeans, and blue slippers. She sits cross-legged on a beige couch."
+          src={smallImg.src}
+          class="block rounded-md md:hidden"
+        />
         <h2 class="">FAQ</h2>
         <p class="text-xl">Have questions that aren't addressed here?</p>
-        <a class="button color-secondary" href=`/contact`>Contact me!</a>
-      </div>
-      <div class="space-content">
+        <a class="button color-secondary self-start" href=`/contact`>Contact me!</a>
         <Accordion>
           <AccordionItem name="exclusive" title="What is online therapy?">
             <p>
@@ -43,6 +49,11 @@ import { Accordion, AccordionItem } from 'accessible-astro-components'
           </AccordionItem>
         </Accordion>
       </div>
+      <Media
+        alt="Emily Laing, LPC, a white woman in her mid to late 30s with shoulder-length auburn hair, smiles towards the camera. She wears a green sweater with a denim collared shirt underneath, jeans, and blue slippers. She sits cross-legged on a beige couch."
+        src={largeImg.src}
+        class="hidden w-full rounded-md md:block"
+      />
     </div>
   </section>
 </DefaultLayout>

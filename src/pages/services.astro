@@ -1,41 +1,61 @@
 ---
+import { Media } from 'accessible-astro-components'
 import DefaultLayout from '../layouts/DefaultLayout.astro'
-import Feature from '../components/Feature.astro'
-import ContentMedia from '../components/ContentMedia.astro'
+import smallImg from '../assets/img/EmilyLaingLPC-services-small.jpg'
+import largeImg from '../assets/img/EmilyLaingLPC-services-large.jpg'
 ---
 
 <DefaultLayout title="Services">
-  <section class="my-8 md:my-12">
-    <div class="container page">
-      <h2 class="mb-8">Services</h2>
-      <div class="flex flex-col gap-8">
-        <p>
-          I provide individual, online psychotherapy for adults. I primarily work with clients struggling with anxiety
-          and depression.
-        </p>
-        <p>
-          I have advanced training in Somatic Experiencing (Levels 1 and 2) and enjoy working with clients who are
-          interested in exploring the mind-body connection.
-        </p>
-        <p>
-          Prior to providing individual therapy, I worked in community mental health supporting families. I received
-          training in the Postive Parenting Program (Triple P), an evidence-based program empowering parents to promote
-          positive behavioral change in their children. As such, I'm also excited to work with parents who are looking
-          for support.
-        </p>
-        <p>
-          As a member of the LGBTQ+ community, I am passionate about supporting clients who are navigating their
-          sexuality.
-        </p>
+  <section class="my-8 lg:my-12">
+    <div class="page container">
+      <h2 class="my-8 hidden lg:block">Services</h2>
+      <div class="grid grid-cols-1 gap-8 lg:gap-16 pb-8 lg:grid-cols-2 lg:pb-12">
+        <div>
+          <Media
+            alt="Emily Laing, LPC, a white woman in her mid to late 30s with shoulder-length auburn hair, smiles towards the camera. She wears a green sweater with a blue and white-striped collared shirt underneath. She sits at a desk with a laptop on it."
+            src={smallImg.src}
+            class="my-0 block w-full rounded-md lg:hidden"
+          />
+          <h2 class="mt-8 lg:hidden">Services</h2>
+          <p class="hidden lg:block">
+            I provide individual, online psychotherapy for adults. I primarily work with clients struggling with anxiety
+            and depression.
+          </p>
+          <Media
+            alt="Emily Laing, LPC, a white woman in her mid to late 30s with shoulder-length auburn hair, smiles towards the camera. She wears a grey wool coat over a green sweater and denim collared shirt. She stands outside in front a tree and snow."
+            src={largeImg.src}
+            class="my-8 hidden w-full rounded-md lg:block"
+          />
+        </div>
+        <div class="flex flex-col gap-8">
+          <p class="lg:hidden">
+            I provide individual, online psychotherapy for adults. I primarily work with clients struggling with anxiety
+            and depression.
+          </p>
+          <p>
+            I have advanced training in Somatic Experiencing (Levels 1 and 2) and enjoy working with clients who are
+            interested in exploring the mind-body connection.
+          </p>
+          <p>
+            Prior to providing individual therapy, I worked in community mental health supporting families. I received
+            training in the Postive Parenting Program (Triple P), an evidence-based program empowering parents to
+            promote positive behavioral change in their children. As such, I'm also excited to work with parents who are
+            looking for support.
+          </p>
+          <p>
+            As a member of the LGBTQ+ community, I am passionate about supporting clients who are navigating their
+            sexuality.
+          </p>
+        </div>
       </div>
     </div>
   </section>
-  <section class="bg-[#F7F1E5] py-12">
+  <section class="bg-neutral-200 py-8 md:py-12">
     <div class="container">
       <p class="text-xl text-[#2A6F69] md:text-2xl">Have any questions or want to book an appointment?</p>
       <div class="mt-6 flex flex-row gap-3">
-        <a class="button" href="/contact/"> Contact me! </a>
-        <a class="button color-secondary" href="/about/"> FAQ </a>
+        <a class="button" href=`/contact`> Contact me!</a>
+        <a class="button color-secondary" href=`/faq`> FAQ </a>
       </div>
     </div>
   </section>
