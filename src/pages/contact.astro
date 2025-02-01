@@ -138,7 +138,6 @@ import DefaultLayout from '../layouts/DefaultLayout.astro'
   })
 
   form.querySelectorAll('input, textarea').forEach((input) => {
-    input.addEventListener('input', () => validateField(input))
     input.addEventListener('blur', () => validateField(input))
   })
 </script>
