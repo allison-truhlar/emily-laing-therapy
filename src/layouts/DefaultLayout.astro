@@ -7,8 +7,8 @@ import Footer from '../components/Footer.astro'
 
 const {
   title = 'Emily Laing Therapy',
-  description = 'Emily Laing, LMHC. Providing evidence-based therapy for adults in New York, Virginia, and Washington DC.',
-  image = '/social-preview-image.png',
+  description = 'Emily Laing, LMHC. Providing online, somatic-focused therapy for adults in Washington DC and Virginia.',
+  image = '/img/EmilyLaingLPC.jpg',
 } = Astro.props
 ---
 
@@ -24,9 +24,7 @@ const {
     <SiteMeta
       title={title}
       description={description.substring(0, 100)}
-      url={Astro.site
-        ? `${Astro.site}/${title.toLowerCase().replaceAll(' ', '-')}`
-        : `https://accessible-astro.dev/${title.toLowerCase().replaceAll(' ', '-')}`}
+      url={`${Astro.site}/${title.toLowerCase().replaceAll(' ', '-')}`}
       image={image}
     />
   </head>
