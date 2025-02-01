@@ -1,8 +1,51 @@
 ---
+import { Media } from 'accessible-astro-components'
 import DefaultLayout from '../layouts/DefaultLayout.astro'
 import Hero from '../components/Hero.astro'
+
+import image from '../assets/img/EmilyLaingLPC-home-small.jpg'
 ---
 
 <DefaultLayout title="Home">
   <Hero />
+  <section class="my-8 md:my-12">
+    <div class="page container">
+      <div class="grid grid-cols-1 gap-8 px-4 pb-8 md:grid-cols-2 md:pb-12">
+        <div class="flex min-w-[300px] flex-col gap-8 md:hidden">
+          <div>
+            <h2>Hi, I'm Emily</h2>
+            <p>(She/Her/Hers)</p>
+          </div>
+          <Media
+            alt="Emily Laing, LPC, a white woman in her mid to late 30s with shoulder-length auburn hair, smiles towards the camera. She wears a green sweater with a denim collared shirt underneath, jeans, and blue slippers. She sits on a blue armchair. To her right is a small side table with a lamp."
+            src={image.src}
+            class="block w-full rounded-md"
+          />
+          <p>Welcome! I'm honored you're considering working with me.</p>
+          <p>
+            I'm a Licensed Professional Counselor (LPC) offering online psychotherapy to adults living in Washington DC
+            and Virginia. I invite you to explore my site to learn more about me and my approach.
+          </p>
+          <p>Think we might be a good fit or have any questions? I'd love to hear from you.</p>
+          <a class="button color-secondary self-start" href=`/contact`>Message Emily</a>
+        </div>
+        <div class="hidden flex-col items-start justify-center gap-8 md:flex">
+          <h2>Hi, I'm Emily</h2>
+          <p>(She/Her/Hers)</p>
+          <p>Welcome! I'm honored you're considering working with me.</p>
+          <p>
+            I'm a Licensed Professional Counselor (LPC) offering online psychotherapy to adults living in Washington DC
+            and Virginia. I invite you to explore my site to learn more about me and my approach.
+          </p>
+          <p>Think we might be a good fit or have any questions? I'd love to hear from you.</p>
+          <a class="button color-secondary" href=`/contact`>Message Emily</a>
+        </div>
+        <Media
+          alt="Emily Laing, LPC, a white woman in her mid to late 30s with shoulder-length auburn hair, smiles towards the camera. She wears a green sweater with a denim collared shirt underneath, jeans, and blue slippers. She sits on a blue armchair. To her right is a small side table with a lamp."
+          src={image.src}
+          class="hidden rounded-md md:block"
+        />
+      </div>
+    </div>
+  </section>
 </DefaultLayout>

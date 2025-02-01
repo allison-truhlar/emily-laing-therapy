@@ -1,40 +1,54 @@
 ---
 import DefaultLayout from '../layouts/DefaultLayout.astro'
 import { Media } from 'accessible-astro-components'
+import smallImg from '../assets/img/EmilyLaingLPC-about-small.jpg'
+import largeImg from '../assets/img/EmilyLaingLPC-about-large.jpg'
+import Feature from '../components/Feature.astro'
 ---
 
 <DefaultLayout title="About">
   <section class="my-8 md:my-12">
     <div class="page container">
       <div class="grid grid-cols-1 gap-8 pb-8 md:grid-cols-2 md:pb-12">
-        <div class="flex min-w-[300px] flex-col gap-8 md:gap-12">
-          <div>
-            <h2>Hi, I'm Emily</h2>
-            <p class="pb-4">(She/Her/Hers)</p>
-            <p>I'm honored you're considering working with me.</p>
-          </div>
+        <div class="flex min-w-[300px] flex-col justify-center gap-8 md:gap-12">
           <Media
-            alt="Emily Laing, LPC, a white woman in her mid to late 30s with shoulder-length auburn hair and wearing a green sweater with a blue and white-striped collared shirt underneath, smiles towards the camera. She sits in front of a bookshelf with a statue reading 'Sit still and heal'."
-            src={`/img/EMILY-LAING-LPC.jpg`}
+            alt="Emily Laing, LPC, a white woman in her mid to late 30s with shoulder-length auburn hair, smiles towards the camera. She wears a grey wool coat over a green sweater and denim collared shirt. She stands outside in front a tree and snow."
+            src={smallImg.src}
             class="block w-full rounded-md md:hidden"
           />
+          <div>
+            <h2>Hi, I'm Emily</h2>
+            <p>(She/Her/Hers)</p>
+          </div>
           <p>
             I'm a Licensed Mental Health Counselor (LMHC) offering online psychotherapy to adults living in Washington
             DC and Virginia. I specialize in somatic-focused therapy, which means I help you connect with your body to
             heal from past trauma, anxiety, and depression.
           </p>
-          <p>I received my Masters from University of Albany.</p>
+          <p>When I'm not working, you can find me hanging out with my wife, son, and two cats.</p>
+          <div class="flex min-w-[300px] flex-col gap-8 md:hidden">
+            <Feature title="Education"><p>LPC, University of Albany.</p></Feature>
+            <Feature title="Advanced Training"
+              ><p>Somatic Experiencing (Levels 1 and 2)</p><p>Postive Parenting Program (Triple P)</p>
+            </Feature>
+          </div>
         </div>
         <Media
-          alt="Emily Laing, LPC, a white woman in her mid to late 30s with shoulder-length auburn hair and wearing a green sweater with a blue and white-striped collared shirt underneath, smiles towards the camera. She sits in front of a bookshelf with a statue reading 'Sit still and heal'."
-          src={`/img/EMILY-LAING-LPC.jpg`}
-          class="hidden w-full md:block"
+          alt="Emily Laing, LPC, a white woman in her mid to late 30s with shoulder-length auburn hair, smiles towards the camera. She wears a grey wool coat over a green sweater and denim collared shirt. She stands outside in front a tree and snow."
+          src={largeImg.src}
+          class="hidden w-full rounded-md md:block"
         />
+      </div>
+      <div class="hidden gap-8 md:flex">
+        <Feature title="Education"><p>LPC, University of Albany.</p></Feature>
+        <Feature title="Advanced Training"
+          ><p>Somatic Experiencing (Levels 1 and 2)</p><p>Postive Parenting Program (Triple P)</p>
+        </Feature>
       </div>
     </div>
   </section>
 
-  <section class="bg-[#F7F1E5] py-8 md:py-12">
+  <section class="bg-neutral-200 py-8 md:py-12">
     <div class="container">
       <p class="text-xl text-[#2A6F69] md:text-2xl">Have any questions or want to book an appointment?</p>
       <div class="mt-6 flex flex-row gap-3">
