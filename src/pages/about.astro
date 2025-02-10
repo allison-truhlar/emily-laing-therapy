@@ -9,41 +9,66 @@ import Feature from '../components/Feature.astro'
 <DefaultLayout title="About">
   <section class="my-8 md:my-12">
     <div class="page container">
-      <div class="grid grid-cols-1 gap-8 pb-8 md:grid-cols-2 md:pb-12">
-        <div class="flex min-w-[300px] flex-col justify-center gap-8 md:gap-12">
+      <div class="grid grid-cols-1 gap-y-8 lg:grid-cols-2 lg:gap-x-12">
+        <div class="gap-4 flex min-w-[300px] flex-col lg:gap-8">
           <Media
             alt="Emily Laing, LPC, a white woman in her mid to late 30s with shoulder-length auburn hair, smiles towards the camera. She wears a grey wool coat over a green sweater and denim collared shirt. She stands outside in front a tree and snow."
             src={smallImg.src}
-            class="block w-full rounded-md md:hidden"
+            class="block w-full rounded-md lg:hidden"
           />
           <div>
-            <h2>Hi, I'm Emily</h2>
+            <h2>Hi, I'm Emily!</h2>
             <p>(She/Her/Hers)</p>
           </div>
           <p>
-            I'm a Licensed Mental Health Counselor (LMHC) offering online psychotherapy to adults living in Washington
-            DC and Virginia. I specialize in somatic-focused therapy, which means I help you connect with your body to
-            heal from past trauma, anxiety, and depression.
+            I’ve been a therapist since 2012 and I deeply value my work. I bring my curiosity, warmth, and intelligence
+            to my clients and love nothing more than working together to help you feel seen, hopeful, and empowered.
           </p>
-          <p>When I'm not working, you can find me hanging out with my wife, son, and two cats.</p>
-          <div class="flex min-w-[300px] flex-col gap-8 md:hidden">
+          <p>
+            I received my master's in mental health counseling from the University at Albany, SUNY in Albany, New York
+            in 2011. I grew up in rural Central New York, just east of the Finger Lakes, and spent my adulthood living
+            in and around Albany, Syracuse, and Ithaca, New York before moving to DC with my wife in 2019.
+          </p>
+          <p>
+            It's here in DC and Northern Virginia that I have developed my therapy practice into what I once imagined -
+            deep, meaningful therapeutic relationships with adults who care about living their values, who are figuring
+            out healthy communication and boundaries with their loved ones, and who are always learning and growing. I
+            am most practiced at supporting clients who deal with anxiety, depression, and ADHD. Some of the topics I
+            often explore include family relationships, work and career stress, social justice, spirituality, dating,
+            and friendships.
+          </p>
+          <p>
+            As a therapist, I am somewhere in the middle of the directive-non directive spectrum. That means that my
+            main tool is empathic listening, but I am also an active participant in the conversation. You will see my
+            genuine reactions, I will sometimes use humor, and I will both ask you questions and explain why I am asking
+            them, if you want to know. I will invite your feedback throughout our work together because I want to be
+            sure that what we’re doing is working for you.
+          </p>
+          <p>
+            When I'm not working, you can find me hanging out with my wife, toddler, and two cats. A good day involves
+            some time with nature, ice cream, and audiobooks, my favorites being memoirs, queer rom coms,
+            self-help/psychology (of course), and Jane Austen, as read by brilliant British actress Juliet Stevenson.
+          </p>
+          <div class="flex min-w-[300px] flex-col sm:flex-row pt-8 gap-8 lg:hidden">
             <Feature title="Education"><p>LPC, University of Albany.</p></Feature>
             <Feature title="Advanced Training"
               ><p>Somatic Experiencing (Levels 1 and 2)</p><p>Postive Parenting Program (Triple P)</p>
             </Feature>
           </div>
         </div>
-        <Media
-          alt="Emily Laing, LPC, a white woman in her mid to late 30s with shoulder-length auburn hair, smiles towards the camera. She wears a grey wool coat over a green sweater and denim collared shirt. She stands outside in front a tree and snow."
-          src={largeImg.src}
-          class="hidden w-full rounded-md md:block"
-        />
-      </div>
-      <div class="hidden gap-8 md:flex">
-        <Feature title="Education"><p>LPC, University of Albany.</p></Feature>
-        <Feature title="Advanced Training"
-          ><p>Somatic Experiencing (Levels 1 and 2)</p><p>Postive Parenting Program (Triple P)</p>
-        </Feature>
+        <div>
+          <Media
+            alt="Emily Laing, LPC, a white woman in her mid to late 30s with shoulder-length auburn hair, smiles towards the camera. She wears a grey wool coat over a green sweater and denim collared shirt. She stands outside in front a tree and snow."
+            src={largeImg.src}
+            class="hidden w-full rounded-md lg:block pb-12"
+          />
+          <div class="hidden gap-12 lg:flex flex-col ">
+            <Feature title="Education"><p>LPC, University of Albany.</p></Feature>
+            <Feature title="Advanced Training"
+              ><p>Somatic Experiencing (Levels 1 and 2)</p><p>Postive Parenting Program (Triple P)</p>
+            </Feature>
+          </div>
+        </div>
       </div>
     </div>
   </section>
