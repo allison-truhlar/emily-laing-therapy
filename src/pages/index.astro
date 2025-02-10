@@ -21,10 +21,11 @@ import image from '../assets/img/EmilyLaingLPC-home-small.jpg'
             src={image.src}
             class="block w-full rounded-md"
           />
-          <p>Welcome! I'm honored you're considering working with me.</p>
+          <p>Welcome! I'm so happy you're here.</p>
           <p>
             I'm a Licensed Professional Counselor (LPC) offering online psychotherapy to adults living in Washington DC
-            and Virginia. I invite you to explore my site to learn more about me and my approach.
+            and Virginia. I invite you to explore my site to learn more <a class="underline" href="/about">about me</a> and
+            my <a href="/services">approach</a>.
           </p>
           <p>Think we might be a good fit or have any questions? I'd love to hear from you.</p>
           <a class="button color-secondary self-start" href=`/contact`>Message Emily</a>
@@ -32,10 +33,13 @@ import image from '../assets/img/EmilyLaingLPC-home-small.jpg'
         <div class="hidden flex-col items-start justify-center gap-8 md:flex">
           <h2>Hi, I'm Emily</h2>
           <p>(She/Her/Hers)</p>
-          <p>Welcome! I'm honored you're considering working with me.</p>
+          <p>Welcome! I'm so happy you're here.</p>
           <p>
             I'm a Licensed Professional Counselor (LPC) offering online psychotherapy to adults living in Washington DC
-            and Virginia. I invite you to explore my site to learn more about me and my approach.
+            and Virginia. I invite you to explore my site to learn more <a
+              class="hover:text-secondary underline"
+              href="/about">about me</a
+            > and my <a href="/services">approach</a>.
           </p>
           <p>Think we might be a good fit or have any questions? I'd love to hear from you.</p>
           <a class="button color-secondary" href=`/contact`>Message Emily</a>
@@ -49,3 +53,14 @@ import image from '../assets/img/EmilyLaingLPC-home-small.jpg'
     </div>
   </section>
 </DefaultLayout>
+
+<style>
+  p > a {
+    text-decoration: underline;
+
+    &:hover {
+      color: var(--primary-200);
+    }
+
+  }
+</style>
