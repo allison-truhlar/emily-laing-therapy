@@ -8,12 +8,12 @@ import largeImg from '../assets/img/EmilyLaingLPC-faq-large.jpg'
 
 <DefaultLayout title="FAQ">
   <section class="my-8 md:my-12">
-    <div class="page container grid grid-cols-1 gap-8 md:grid-cols-2">
-      <div class="flex flex-col justify-center gap-4 md:justify-start md:gap-8">
+    <div class="page container grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-12 xl:gap-x-16">
+      <div class="flex flex-col justify-center gap-4 lg:justify-start lg:gap-8">
         <Media
           alt="Emily Laing, LPC, a white woman in her mid to late 30s with shoulder-length auburn hair, smiles towards the camera. She wears a green sweater with a denim collared shirt underneath, jeans, and blue slippers. She sits cross-legged on a beige couch."
           src={smallImg.src}
-          class="block rounded-md md:hidden"
+          class="block rounded-md lg:hidden"
         />
         <h2 class="">FAQ</h2>
         <p class="text-xl">Have questions that aren't addressed here?</p>
@@ -22,13 +22,15 @@ import largeImg from '../assets/img/EmilyLaingLPC-faq-large.jpg'
           <AccordionItem name="exclusive" title="What is online therapy?">
             <p>
               Online therapy (also known as telehealth or virtual therapy) is therapy that takes place over the Internet
-              instead of in person. I use a secure video platform called Simple Practice to conduct sessions.
+              instead of in person. I use a secure, HIPAA compliant video platform to conduct sessions.
             </p>
           </AccordionItem>
           <AccordionItem name="exclusive" title="Do you take insurance?">
             <p>
-              Yes! I am in-network with CareFirst BlueCross BlueShield. If I'm not in-network with your insurance, I can
-              provide you with a superbill to submit to your insurance company for reimbursement.
+              Soon! I am in the process of credentialing with CareFirst BlueCross BlueShield and expect to be in-network
+              with them by the end of April 2025. If I'm not in-network with your insurance, I can provide you with a
+              superbill to submit to your insurance company for reimbursement. I am happy to provide further information
+              about this during our initial consultation call.
             </p>
           </AccordionItem>
           <AccordionItem name="exclusive" title="What are your fees?">
@@ -47,12 +49,88 @@ import largeImg from '../assets/img/EmilyLaingLPC-faq-large.jpg'
               advance.
             </p>
           </AccordionItem>
+          <AccordionItem name="exclusive" title="What can I expect during a consultation call?">
+            <p>
+              I will give you a phone call at the time we have set via email. When you answer, I'll double check to make
+              sure it's still a good time for you. Then, I will ask a few broad questions to start to get to know you
+              and to see if we might be a good fit. For example, I might ask what has led to you seeking therapy now and
+              wheather you have ever done therapy before. I will also invite you to ask any questions you might have. If
+              we both decide to move forward together, we'll go right into finding a time on our calendars. If not, I
+              will offer to email you other resources to support your therapist search.
+            </p>
+          </AccordionItem>
+          <AccordionItem name="exclusive" title="What can I expect at my first session with you?">
+            <p>
+              I will email you a link for the video call in advance. When we meet for the first time, I will introduce
+              myself and check in with how you are in that moment- nervous, excited, tired, hopeless- whatever! I will
+              ask you if we should set aside time to discuss any topics that are on your mind. And I will have some
+              general initial topics to cover- who's in your life, what do you do with your days, what has therapy been
+              like for you in your past (if relevant), and what are your goals for therapy, for example. I will have a
+              more directive approach during this session than I will have in subsequent sessions, as I am seeking to
+              get a picture of you and your life as I start to understand what our work together might entail.
+            </p>
+          </AccordionItem>
+          <AccordionItem name="exclusive" title="What are your hours?">
+            <p>I work during the daytime on weekdays. I do not currently offer evening or weekend hours.</p>
+          </AccordionItem>
+          <AccordionItem name="exclusive" title="What books and resources do you recommend?">
+            <p>
+              Oh boy, have I got recommendations! A few that I find myself bringing up often, in no particular order:
+            </p>
+            <ul class="list-disc">
+              <li>
+                <span class="font-bold">For social anxiety:</span>
+                <span class="font-italic"
+                  >How To Be Yourself: How To Rise Above Social Anxiety and Quiet your Inner Critic
+                </span>by Ellen Hendriksen PhD
+              </li>
+              <li>
+                <span class="font-bold"
+                  >For addressing the traumatic impact of racism and for somatic coping skills more generally:</span
+                >
+                <span class="font-italic"
+                  >My Grandmother's Hands: Racialized Trauma and the Mending of Our Bodies and Hearts
+                </span>by Resmaa Menakem, MSW, LICSW, SEP
+              </li>
+              <li>
+                <span class="font-bold">For learning what healing from trauma can look like:</span>
+                <span class="font-italic">What My Bones Know: A Memoir of Healing from Complex Trauma </span>by
+                Stephanie Foo
+              </li>
+              <li>
+                <span class="font-bold"
+                  >For developing self-compassion generally and for ADHD and depression specifically:
+                </span>
+                <span class="font-italic"
+                  >How to Keep House While Drowning: A Gentle Approach to Cleaning and Organizing
+                </span>by KC Davis
+              </li>
+              <li>
+                <span class="font-bold">For healing your relationship to sex: </span>
+                <span class="font-italic"
+                  >Come as You Are: The Surprising New Science that Will Transform Your Sex Life
+                </span>by Emily Nagoski PhD
+              </li>
+              <li>
+                <span class="font-bold">For people experiencing persistent overwhelm: </span>
+                <span class="font-italic"
+                  >The Burnout Workbook: Advice and Exercises to Help You Unlock the Stress Cycle
+                </span>by Emily Nagoski PhD and Amelia Nagoski DMA
+              </li>
+              <li>
+                <span class="font-bold">For learning and practicing mindfulness skills: </span>
+                <span class="font-italic"
+                  >Just One Thing: Developing a Buddha Brain One Simple Practice at a Time
+                </span>by Rick Hanson PhD
+              </li>
+            </ul>
+          </AccordionItem>
         </Accordion>
       </div>
       <Media
         alt="Emily Laing, LPC, a white woman in her mid to late 30s with shoulder-length auburn hair, smiles towards the camera. She wears a green sweater with a denim collared shirt underneath, jeans, and blue slippers. She sits cross-legged on a beige couch."
         src={largeImg.src}
-        class="hidden w-full rounded-md md:block"
+        class="hidden w-full rounded-md lg:block"
       />
     </div>
   </section>
