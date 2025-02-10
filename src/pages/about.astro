@@ -10,7 +10,7 @@ import Feature from '../components/Feature.astro'
   <section class="my-8 md:my-12">
     <div class="page container">
       <div class="grid grid-cols-1 gap-y-8 lg:grid-cols-2 lg:gap-x-12">
-        <div class="gap-4 flex min-w-[300px] flex-col lg:gap-8">
+        <div class="flex min-w-[300px] flex-col gap-4 lg:gap-8">
           <Media
             alt="Emily Laing, LPC, a white woman in her mid to late 30s with shoulder-length auburn hair, smiles towards the camera. She wears a grey wool coat over a green sweater and denim collared shirt. She stands outside in front a tree and snow."
             src={smallImg.src}
@@ -49,10 +49,26 @@ import Feature from '../components/Feature.astro'
             some time with nature, ice cream, and audiobooks, my favorites being memoirs, queer rom coms,
             self-help/psychology (of course), and Jane Austen, as read by brilliant British actress Juliet Stevenson.
           </p>
-          <div class="flex min-w-[300px] flex-col sm:flex-row pt-8 gap-8 lg:hidden">
-            <Feature title="Education"><p>LPC, University of Albany.</p></Feature>
-            <Feature title="Advanced Training"
-              ><p>Somatic Experiencing (Levels 1 and 2)</p><p>Postive Parenting Program (Triple P)</p>
+          <div class="flex min-w-[300px] flex-col gap-8 pt-8 lg:hidden">
+            <Feature title="Education">
+              <div class="text-sm font-bold sm:text-base">Master of Science, Mental Health Counseling</div>
+              <div class="text-sm sm:text-base">University at Albany, SUNY, 2011</div>
+            </Feature>
+            <Feature title="Advanced Training">
+              <div class="pb-4">
+                <div class="pb-2 text-sm font-bold sm:text-base">
+                  Somatic Experiencing, Professional Training through Somatic Experiencing International
+                </div>
+                <ol class="list-disc pl-4">
+                  <li class="text-sm sm:text-base">Intermediate levels I, II, and III, April 2021 - January 2022</li>
+                  <li class="text-sm sm:text-base">Beginning levels I, II, and III, February 2020 - January 2021</li>
+                </ol>
+              </div>
+              <div class="pb-2 text-sm font-bold sm:text-base">Triple P (Positive Parenting Program)</div>
+              <ol class="list-disc pl-4">
+                <li class="text-sm sm:text-base">Primary Care (Level 3), September 2017</li>
+                <li class="text-sm sm:text-base">Standard (Level 4), October 2015</li>
+              </ol>
             </Feature>
           </div>
         </div>
@@ -60,12 +76,28 @@ import Feature from '../components/Feature.astro'
           <Media
             alt="Emily Laing, LPC, a white woman in her mid to late 30s with shoulder-length auburn hair, smiles towards the camera. She wears a grey wool coat over a green sweater and denim collared shirt. She stands outside in front a tree and snow."
             src={largeImg.src}
-            class="hidden w-full rounded-md lg:block pb-12"
+            class="hidden w-full rounded-md pb-12 lg:block"
           />
-          <div class="hidden gap-12 lg:flex flex-col ">
-            <Feature title="Education"><p>LPC, University of Albany.</p></Feature>
-            <Feature title="Advanced Training"
-              ><p>Somatic Experiencing (Levels 1 and 2)</p><p>Postive Parenting Program (Triple P)</p>
+          <div class="hidden flex-col gap-12 lg:flex">
+            <Feature title="Education">
+              <div class="text-sm font-bold sm:text-base">Master of Science, Mental Health Counseling</div>
+              <div class="text-sm lg:text-base">University at Albany, SUNY, 2011</div>
+            </Feature>
+            <Feature title="Advanced Training">
+              <div class="pb-4">
+                <div class="pb-2 text-sm font-bold sm:text-base">
+                  Somatic Experiencing, Professional Training through Somatic Experiencing International
+                </div>
+                <ol class="list-disc pl-4">
+                  <li class="text-sm sm:text-base">Intermediate levels I, II, and III, April 2021 - January 2022</li>
+                  <li class="text-sm sm:text-base">Beginning levels I, II, and III, February 2020 - January 2021</li>
+                </ol>
+              </div>
+              <div class="pb-2 text-sm font-bold sm:text-base">Triple P (Positive Parenting Program)</div>
+              <ol class="list-disc pl-4">
+                <li class="text-sm sm:text-base">Primary Care (Level 3), September 2017</li>
+                <li class="text-sm sm:text-base">Standard (Level 4), October 2015</li>
+              </ol>
             </Feature>
           </div>
         </div>
