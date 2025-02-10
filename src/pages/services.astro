@@ -8,45 +8,20 @@ import largeImg from '../assets/img/EmilyLaingLPC-services-large.jpg'
 <DefaultLayout title="Services">
   <section class="my-8 lg:my-12">
     <div class="page container">
-      <h2 class="my-8 hidden lg:block">Services</h2>
-      <div class="grid grid-cols-1 gap-8 lg:gap-16 pb-8 lg:grid-cols-2 lg:pb-12">
-        <div>
+      <h2 class="my-8">Services</h2>
+      <div class="flex flex-col lg:flex-row lg:gap-16 pb-12 lg:pb-8">
           <Media
             alt="Emily Laing, LPC, a white woman in her mid to late 30s with shoulder-length auburn hair, smiles towards the camera. She wears a green sweater with a blue and white-striped collared shirt underneath. She sits at a desk with a laptop on it."
             src={smallImg.src}
-            class="my-0 block w-full rounded-md lg:hidden"
+            class="my-0 min-w-[500px] rounded-md order-last"
           />
-          <h2 class="mt-8 lg:hidden">Services</h2>
-          <p class="hidden lg:block">
-            I provide individual, online psychotherapy for adults. I primarily work with clients struggling with anxiety
-            and depression.
+          <p class="mb-12 lg:mb-0">
+            I provide individual, online psychotherapy for adults on a weekly and biweekly basis. Sessions are 50
+            minutes each. In addition to traditional talk therapy, I have advanced training in Somatic Experiencing
+            (Beginning and Intermediate levels) and enjoy working with clients who are interested in exploring the
+            mind-body connection.
           </p>
-          <Media
-            alt="Emily Laing, LPC, a white woman in her mid to late 30s with shoulder-length auburn hair, smiles towards the camera. She wears a grey wool coat over a green sweater and denim collared shirt. She stands outside in front a tree and snow."
-            src={largeImg.src}
-            class="my-8 hidden w-full rounded-md lg:block"
-          />
-        </div>
-        <div class="flex flex-col gap-8">
-          <p class="lg:hidden">
-            I provide individual, online psychotherapy for adults. I primarily work with clients struggling with anxiety
-            and depression.
-          </p>
-          <p>
-            I have advanced training in Somatic Experiencing (Levels 1 and 2) and enjoy working with clients who are
-            interested in exploring the mind-body connection.
-          </p>
-          <p>
-            Prior to providing individual therapy, I worked in community mental health supporting families. I received
-            training in the Postive Parenting Program (Triple P), an evidence-based program empowering parents to
-            promote positive behavioral change in their children. As such, I'm also excited to work with parents who are
-            looking for support.
-          </p>
-          <p>
-            As a member of the LGBTQ+ community, I am passionate about supporting clients who are navigating their
-            sexuality.
-          </p>
-        </div>
+  
       </div>
     </div>
   </section>
