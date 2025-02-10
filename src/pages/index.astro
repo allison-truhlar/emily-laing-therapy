@@ -3,7 +3,8 @@ import { Media } from 'accessible-astro-components'
 import DefaultLayout from '../layouts/DefaultLayout.astro'
 import Hero from '../components/Hero.astro'
 
-import image from '../assets/img/EmilyLaingLPC-home-small.jpg'
+import imageSmall from '../assets/img/EmilyLaingLPC-home-small.jpg'
+import imageLarge from '../assets/img/EmilyLaingLPC-home-large.jpg'
 ---
 
 <DefaultLayout title="Home">
@@ -18,7 +19,7 @@ import image from '../assets/img/EmilyLaingLPC-home-small.jpg'
           </div>
           <Media
             alt="Emily Laing, LPC, a white woman in her mid to late 30s with shoulder-length auburn hair, smiles towards the camera. She wears a green sweater with a denim collared shirt underneath, jeans, and blue slippers. She sits on a blue armchair. To her right is a small side table with a lamp."
-            src={image.src}
+            src={imageSmall.src}
             class="block w-full rounded-md"
           />
           <p>Welcome! I'm so happy you're here.</p>
@@ -46,7 +47,7 @@ import image from '../assets/img/EmilyLaingLPC-home-small.jpg'
         </div>
         <Media
           alt="Emily Laing, LPC, a white woman in her mid to late 30s with shoulder-length auburn hair, smiles towards the camera. She wears a green sweater with a denim collared shirt underneath, jeans, and blue slippers. She sits on a blue armchair. To her right is a small side table with a lamp."
-          src={image.src}
+          src={imageLarge.src}
           class="hidden rounded-md md:block"
         />
       </div>
