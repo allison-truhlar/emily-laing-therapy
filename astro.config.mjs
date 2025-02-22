@@ -4,11 +4,13 @@ import tailwind from '@astrojs/tailwind'
 import compress from 'astro-compress'
 import icon from 'astro-icon'
 
+import sitemap from '@astrojs/sitemap';
+
 // https://astro.build/config
 export default defineConfig({
   site: 'http://emilylaingtherapy.com',
   compressHTML: true,
-  integrations: [mdx(), icon(), tailwind({}), compress()],
+  integrations: [mdx(), icon(), tailwind({}), compress(), sitemap()],
   vite: {
     css: {
       preprocessorOptions: {
