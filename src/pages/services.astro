@@ -9,23 +9,26 @@ import largeImg from '../assets/img/EmilyLaingLPC-services-large.jpg'
   <section class="my-8 lg:my-12">
     <div class="page container">
       <h2 class="my-8">Services</h2>
-      <div class="flex flex-col lg:flex-row lg:gap-16 pb-12 lg:pb-8">
-          <Media
-            alt="Emily Laing, LPC, a white woman in her mid to late 30s with shoulder-length auburn hair, smiles towards the camera. She wears a green sweater with a blue and white-striped collared shirt underneath. She sits at a desk with a laptop on it."
-            src={smallImg.src}
-            class="my-0 min-w-[500px] rounded-md order-last"
-          />
-          <p class="mb-12 lg:mb-0">
-            I provide individual, online psychotherapy for adults on a weekly and biweekly basis. Sessions are 50
-            minutes each. In addition to traditional talk therapy, I have advanced training in Somatic Experiencing
-            (Beginning and Intermediate levels) and enjoy working with clients who are interested in exploring the
-            mind-body connection.
-          </p>
-  
+      <div class="flex flex-col pb-4 lg:flex-row lg:gap-16 lg:pb-8">
+        <p class="lg:mb-0 order-2 lg:order-1">
+          I provide individual, online psychotherapy for adults on a weekly and biweekly basis. Sessions are 50 minutes
+          each. In addition to traditional talk therapy, I have advanced training in Somatic Experiencing (Beginning and
+          Intermediate levels) and enjoy working with clients who are interested in exploring the mind-body connection.
+        </p>
+        <Media
+          alt="Emily Laing, LPC, a white woman in her mid to late 30s with shoulder-length auburn hair, smiles towards the camera. She wears a green sweater with a blue and white-striped collared shirt underneath. She sits at a desk with a laptop on it."
+          src={smallImg.src}
+          class="order-1 mb-8 block rounded-md lg:hidden"
+        />
+        <Media
+          alt="Emily Laing, LPC, a white woman in her mid to late 30s with shoulder-length auburn hair, smiles towards the camera. She wears a green sweater with a blue and white-striped collared shirt underneath. She sits at a desk with a laptop on it."
+          src={largeImg.src}
+          class="hidden min-w-[500px] rounded-md lg:block order-2"
+        />
       </div>
     </div>
   </section>
-  <section class="bg-neutral-200 py-8 md:py-12">
+  <section class="bg-neutral-200 py-8 lg:py-12">
     <div class="container">
       <p class="text-xl text-[#2A6F69] md:text-2xl">Have any questions or want to book an appointment?</p>
       <div class="mt-6 flex flex-row gap-3">
