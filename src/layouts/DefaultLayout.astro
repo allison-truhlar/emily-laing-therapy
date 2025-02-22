@@ -7,7 +7,7 @@ import Footer from '../components/Footer.astro'
 
 const {
   title,
-  description = 'Emily Laing, LMHC. Providing online, somatic-focused therapy for adults in Washington DC and Virginia.',
+  description = 'Emily Laing, LPC. Providing online talk therapy in Washington, DC and Virginia.',
   image = '/img/EmilyLaingLPC.jpg',
 } = Astro.props
 ---
@@ -23,7 +23,7 @@ const {
 
     <SiteMeta
       title={title}
-      description={description.substring(0, 100)}
+      description={description}
       url={`${Astro.site}/${title.toLowerCase().replaceAll(' ', '-')}`}
       image={image}
     />
