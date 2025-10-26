@@ -27,7 +27,7 @@ const {
     <SiteMeta
       title={title}
       description={description}
-      url={`${Astro.site}/${title.toLowerCase().replaceAll(' ', '-')}`}
+      url={Astro.url.href}
       image={image}
     />
   </head>
