@@ -3,19 +3,29 @@ const { title, description, url, image, author } = Astro.props
 const subtitle = 'Emily Laing Therapy'
 ---
 
+<!-- canonical URL -->
+<link rel="canonical" href={url} />
+
+<!-- robots meta -->
+<meta name="robots" content="index, follow" />
+
 <!-- general meta -->
 <meta name="title" content={`${title} - ${subtitle}`} />
 <meta name="description" content={description} />
-<meta name="author" content={author} />
+{author && <meta name="author" content={author} />}
 
 <!-- open graph -->
 <meta property="og:title" content={`${title} - ${subtitle}`} />
 <meta property="og:description" content={description} />
 <meta property="og:type" content="website" />
 <meta property="og:url" content={url} />
-<meta property="og:image" content={Astro.site ? `${Astro.site}${image}` : image} />
+<meta property="og:image" content={new URL(image, Astro.site).href} />
 
 <!-- twitter card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={`${title} - ${subtitle}`} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={new URL(image, Astro.site).href} />
 
 <!-- page title -->
 <title>{title} - {subtitle}</title>
